@@ -9,7 +9,7 @@ const DeleteLastWord = () => {
   return (
     <div>
         <h3>Modifica la frase eliminando la última palabra</h3>
-        <input></input>
+        <input onChange={(e)=>{setInputUser(e.target.value)}} value={inputUser}></input>
         <button>modificar</button>
     </div>
   )
