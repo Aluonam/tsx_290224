@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const DeleteLastWord = () => {
+
+    const [inputUser, setInputUser] = useState<string>()
+    const [newSentence, setNewSentence] = useState<string[]>()
+
+
   return (
-    <div>DeleteLastWord</div>
+    <div>
+        <h3>Modifica la frase eliminando la última palabra</h3>
+        <input></input>
+        <button>modificar</button>
+    </div>
   )
 }
 
