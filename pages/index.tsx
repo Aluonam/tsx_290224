@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import DeleteLastWord from "@/components/delLastWord/DeleteLastWord";
+import ChangeSpaces from "@/components/changeSpaces/ChangeSpaces";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +17,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <DeleteLastWord></DeleteLastWord>
+        <ChangeSpaces></ChangeSpaces>
       </main>
     </>
   );
