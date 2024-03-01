@@ -13,9 +13,7 @@ const ChangeFirstLetter = () => {
 
             return(letters.join(""))
         })
-        console.log(newArr.join(" "))
-        
-        
+        setNewSentence(newArr.join(" "))
     }
 
   return (
@@ -23,6 +21,7 @@ const ChangeFirstLetter = () => {
         <h3>Pon la primera letra de cada palabra en mayúsculas</h3>
         <input onChange={(e)=>{setUserSentence(e.target.value)}} value={userSentence}></input>
         <button onClick={()=>{handleChangeFirstCharacter()}}>modificar</button>
+        <h4>{newSentence}</h4>
     </div>
   )
 }
