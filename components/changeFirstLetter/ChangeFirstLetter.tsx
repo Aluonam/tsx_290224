@@ -2,17 +2,20 @@ import React, { useState } from 'react'
 
 const ChangeFirstLetter = () => {
 
-    const [userSentence, setUserSentence] = useState<string | undefined>()
-    const [newSentence, setNewSentence] = useState<string[]>()
+    const [userSentence, setUserSentence] = useState<string>("")
+    const [newSentence, setNewSentence] = useState<string>()
 
     const handleChangeFirstCharacter = ()=>{
-        const arrSentence = userSentence?.split(" ");
-        const newArr = arrSentence?.map((oneWord)=>{
+        const arrSentence: string[] = userSentence.split(" ");
+        const newArr = arrSentence.map((oneWord)=>{
             const letters = oneWord.split("")
-            const firstLetter = letters.at(0)
-            return(firstLetter)
+            letters[0] = letters[0].toUpperCase()
+
+            return(letters.join(""))
         })
-        console.log(newArr)
+        console.log(newArr.join(" "))
+        
+        
     }
 
   return (
